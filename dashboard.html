@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container-fluid">
+            <div class="navbar-item AP">
+                <img src="assets/img/APLogo-20-10.png" alt="Argentina Programa" width="10%" >
+            </div>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item facebook">
+                    <a class="navbar-item py-0 px-0 px-lg-2" href="http://www.facebook.com" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25"  fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-item github py-0 px-0 px-lg-2">
+                    <a class="navbar-item" href="http://www.github.com" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li id="logout" class="nav-item py-0 px-0 px-lg-2">
+                    <a class="navbar-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- MODAL LOGIN -->
+    <div id="login-modal" class="nav-item">
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Cerrar Sesión</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>¿Desea cerrar sesión?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="index.html">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>    <br>    <br>
+    <!-- PORTFOLIO -->
+    <div id="about" class="container rounded-3 text-rigth shadow mb-4">
+        <div class="row">
+            <div class="col-12 p-0">
+                <img src="assets/img/wp1828925_.png" class="img-fluid" alt="User">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 text-center">
+                <img src="assets/img/user.png" class="rounded-circle shadow shadow bg-white" style="position: relative; bottom: 95px; width: 50%;" alt="User" title="User">
+                <H1 style="position: relative; bottom: 80px;"><strong>Juan Víctor Castro</strong>
+                    <svg id="edit" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#perfil">
+                        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                    </svg>
+                </H1>
+            </div>
+            <div class="col-9 mt-5">
+                <h2>
+                    <strong>Full Stack Developer Jr.</strong>
+                    <svg id="edit" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#acerca_de">
+                        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                    </svg>
+                </h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non laborum, assumenda nobis necessitatibus magnam odio est ea modi consequatur neque unde, hic error! Similique enim atque, veritatis quasi dolorem perferendis.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non laborum, assumenda nobis necessitatibus magnam odio est ea modi consequatur neque unde, hic error! Similique enim atque, veritatis quasi dolorem perferendis.</p>
+            </div>
+        </div>
+        <!-- MODAL PERFIL -->
+        <div class="modal fade" id="perfil" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Perfil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                            <input class="form-control form-control-sm" type="text" placeholder="Juan Víctor Castro" aria-label=".form-control-sm example">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFileSm" class="form-label">Imagen</label>
+                            <input class="form-control form-control-sm" id="formFileSm" type="file">             
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Modificar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL ACERCA DE ... -->
+        <div class="modal fade" id="acerca_de" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Acerca de ...</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Título</label>
+                        <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Modificar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- # EXPERIENCIA -->
+    <div id="cv" class="container rounded-3 text-rigth p-3 shadow-lg p-4 mb-4 bg-white">
+        <h3>
+            <b>Experiencia</b>
+            <svg id="edit" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#experiencia">
+                <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+            </svg>
+        </h3>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4>Mantenimiento de Redes</h4>
+                <P>DITESI - Facultad de Ciencias Económincas - Universidad Nacional de La Plata</P>
+            </li>
+            <li class="list-group-item"><h4>Asistente Técnico Informático</h4>
+                <P>DATI - Dirección General de Personal - Universidad Nacional de La Plata</P></li>
+            <li class="list-group-item"><h4>Auditor Tecnológico</h4>
+                <P>CeSPI - Universidad Nacional de La Plata</P></li>
+        </ul>
+            <!-- MODAL EXPERIENCIA -->
+            <div class="modal fade" id="experiencia" data-bs-backdrop="static"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Experiencia</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Experiencia #1
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Título</label>
+                                                <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Experiencia #2
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Título</label>
+                                                <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Experiencia #3
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Título</label>
+                                                <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning">Agregar</button>
+                            <button type="button" class="btn btn-primary">Modificar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- # EDUCACIÓN -->
+    <div id="cv" class="container rounded-3 text-rigth p-3 shadow-lg p-4 mb-4 bg-white">
+        <h3>
+            <b>Educación</b>
+            <svg id="edit" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#educación">
+                <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+            </svg>
+        </h3>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4>Argentina Programa</h4>
+                    <P>Plan Argentina Programa</P></li>
+                <li class="list-group-item"><h4>CCNA - Routing and Switching</h4>
+                    <P>Cisco Networking Academy - CeSPI</P></li>
+                <li class="list-group-item"><h4>Cybersecurity Essentials</h4>
+                    <P>Cisco Networking Academy</P></li>
+                <li class="list-group-item"><h4>NDG Linux Essentials</h4>
+                    <P>Cisco Networking Academy</P></li>
+            </ul>
+        <!-- MODAL EDUCACIÓN -->
+        <div class="modal fade" id="educación" data-bs-backdrop="static"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Educación</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-body">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Educación #1
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Título</label>
+                                                <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Educación #2
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Título</label>
+                                                <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Educación #3
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Título</label>
+                                                <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            Educación #4
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Título</label>
+                                                <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning">Agregar</button>
+                            <button type="button" class="btn btn-primary">Modificar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- # HABILIDADES -->
+    <div id="cv" class="container rounded-3 text-rigth p-3 shadow-lg p-4 mb-4 bg-white">
+            <div class="col-12 p-21">
+                <h3>
+                    <b>Hard & Soft Skills</b>
+                    <svg id="edit" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#skills">
+                        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                    </svg>
+                </h3>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <h5>HTML</h5>
+                    <div class="container">
+                        <div class="skills html">
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item"><h5>CSS</h5>
+                    <div class="container">
+                        <div class="skills css">
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <h5>JavaScript</h5>
+                    <div class="container">
+                        <div class="skills js">
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <h5>Python</h5>
+                    <div class="container">
+                        <div class="skills py">
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <h5>SQL</h5>
+                    <div class="container">
+                        <div class="skills sql">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        <!-- MODAL HABILIDADES -->
+        <div class="modal fade" id="skills" data-bs-backdrop="static"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Habilidades</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Habilidad #1
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Título</label>
+                                        <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="customRange3" class="form-label">Valor</label>
+                                        <input type="range" class="form-range" min="0" max="100" step="5" id="customRange3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Habilidad #2
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Título</label>
+                                        <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="customRange3" class="form-label">Valor</label>
+                                        <input type="range" class="form-range" min="0" max="100" step="5" id="customRange3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Habilidad #3
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Título</label>
+                                        <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="customRange3" class="form-label">Valor</label>
+                                        <input type="range" class="form-range" min="0" max="100" step="5" id="customRange3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Habilidad #4
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Título</label>
+                                        <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="customRange3" class="form-label">Valor</label>
+                                        <input type="range" class="form-range" min="0" max="100" step="5" id="customRange3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Habilidad #5
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Título</label>
+                                        <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="customRange3" class="form-label">Valor</label>
+                                        <input type="range" class="form-range" min="0" max="100" step="5" id="customRange3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning">Agregar</button>
+                    <button type="button" class="btn btn-primary">Modificar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- # PROYECTOS -->
+    <div id="cv" class="container rounded-3 text-rigth p-3 shadow-lg p-4 mb-4 bg-white">
+        <div class="row">
+            <div class="col-12 p-21">
+                <h3>
+                    <b>Proyectos</b>
+                    <svg id="edit" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#proyectos">
+                        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                    </svg>
+                </h3>
+            </div>
+            <div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><h4><b>SIAL</b> Sistema Informático de Almacenamiento de Legajos</h4>
+                        <p>Archivador de Legajos del Personal Activo y Pasico de la UNLP</p>
+                    </li>
+                    <li class="list-group-item"><h4><b>SIHUBI</b> Sistema de Huella Biométrica</h4>
+                        <p>Sistema de Control de Asistencia mediante marcaciones en relojes biométricos</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- PROYECTOS -->
+        <div class="modal fade" id="proyectos" data-bs-backdrop="static"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Proyectos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Proyecto #1
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Título</label>
+                                        <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Proyecto #2
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Título</label>
+                                        <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning">Agregar</button>
+                    <button type="button" class="btn btn-primary">Modificar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- FOOTER -->
+    <footer class="bg-dark">
+        <div class="text-center p-3 text-white" style="background-color: #00000033;"> © 2022 Copyright:
+            <a class="text-white" href="#">Juan V. Castro</a>
+            <svg id="edit" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#footer">
+                <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+            </svg>
+        </div>
+        <!-- MODAL FOOTER -->
+        <div class="modal fade" id="footer" data-bs-backdrop="static"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Footer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Año</label>
+                        <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Copyright</label>
+                        <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Link</label>
+                        <input class="form-control form-control-sm" type="text" place="Full Stack Developer Jr." aria-label=".form-control-sm example">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Modificar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
